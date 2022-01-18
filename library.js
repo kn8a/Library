@@ -20,8 +20,20 @@ function addBook(title, author, pages, read) {
 function tableLoad(myLibrary) {
   const tableBody = document.getElementById('books');
   let tableData = '';
+  let i=0;
   for (let book of myLibrary) {
-    tableData += `<tr><td>${book.title}</td><td>${book.author}</td><td>${book.pages}</td><td>${book.read}</td><td><button>❌</button></td></tr>`;
+    let checkState=''
+    if (book.read==true) {
+      checkState = `<input type="checkbox" class="cbx" id='read' name='read' style="display:none" checked>
+      <label for="read" class="toggle"><span></span>`
+    }
+    else if (book.read==false) {
+      checkState = `<input type="checkbox" class="cbx" id='read' name='read' style="display:none">
+      <label for="read" class="toggle"><span></span>`
+    }
+
+    tableData += `<tr><td>${book.title}</td><td>${book.author}</td><td>${book.pages}</td><td>${checkState}</td><td><button class="delBtn" data-del=${i}>❌</button></td></tr>`;
+    i++;
   }
   tableBody.innerHTML = tableData;
 }

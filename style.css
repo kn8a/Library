@@ -1,5 +1,5 @@
 body {
-    background-color: #252422;
+    background-color:#252422;
     display: flex;
     margin: 0;
     min-height: 100vh;
@@ -13,9 +13,19 @@ body {
     width: 80%;
     max-width: 800px;
     display: flex;  
-    background-color: #403D39;
+    background-color:#252422;
     padding: 2vh;
     flex-direction: column;
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3vh;
+}
+
+h1 {
+    margin: 0;
 }
 
 .table {
@@ -33,14 +43,21 @@ table {
 
 td {
     border: grey solid 1px;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 1vh;
 }
 
 th {
     text-align: left;
+    padding-left: 1vh;
+    color: #CCC5B9;
 }
 
+
+
 tr:nth-child(even) {
-    background-color: #252422;
+    background-color: #25242256;
 }
 
 #popupForm {
@@ -62,6 +79,13 @@ tr:nth-child(even) {
 
 }
 
+.delBtn {
+    background-color:transparent;
+    border: transparent;
+    border-radius: 1vh;
+    cursor: pointer;
+}
+
 .formButton {
 
     padding-top: 0.5vh;
@@ -73,7 +97,7 @@ tr:nth-child(even) {
     margin: 0.5vh;
     align-self: center;
     border-radius: 3vh;
-    
+    cursor: pointer;
     font-weight: 600;
 }
 
