@@ -1,5 +1,5 @@
 body {
-    background-color:#252422;
+    background-color:#161614;
     display: flex;
     margin: 0;
     min-height: 100vh;
@@ -13,7 +13,7 @@ body {
     width: 80%;
     max-width: 800px;
     display: flex;  
-    background-color:#252422;
+    background-color: #252422;
     padding: 2vh;
     flex-direction: column;
 }
