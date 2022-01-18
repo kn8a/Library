@@ -24,11 +24,11 @@ function tableLoad(myLibrary) {
   for (let book of myLibrary) {
     let checkState=''
     if (book.read==true) {
-      checkState = `<input type="checkbox" class="cbx" id='read' name='read' style="display:none" checked>
+      checkState = `<input type="checkbox" data-cbx=${i} class="cbx" id='read' name='read' style="display:none" checked>
       <label for="read" class="toggle"><span></span>`
     }
     else if (book.read==false) {
-      checkState = `<input type="checkbox" class="cbx" id='read' name='read' style="display:none">
+      checkState = `<input type="checkbox" data-cbx=${i} class="cbx" id='read' name='read' style="display:none">
       <label for="read" class="toggle"><span></span>`
     }
 
