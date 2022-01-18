@@ -6,16 +6,15 @@ body {
 
     justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
+    color: #FFFCF2;
 }
 
 .main {
     width: 80%;
     max-width: 800px;
     display: flex;  
-
     background-color: #403D39;
     padding: 2vh;
-    color: white;
     flex-direction: column;
 }
 
@@ -52,13 +51,124 @@ tr:nth-child(even) {
     transform: translate(-50%, 5%);
     border: 3px solid #EB5E28;
     z-index: 9;
-    background-color: #252422;
+    background-color: #CCC5B9;
     padding: 3vh;
+    color: #403D39;
+}
+
+#entryForm {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.formButton {
+
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    background-color:#403D39;
+    color:#FFFCF2 ;
+    margin: 0.5vh;
+    align-self: center;
+    border-radius: 3vh;
+    
+    font-weight: 600;
+}
+
+input{
+    border:none;
+    outline:none;
+    height:34px;  
+    bottom:14px;
+    right:9px;
+    border-radius:22px;
+    width:220px;
+    box-sizing:border-box;
+    padding:0 18px; 
+  }
+
+.toggle {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 20px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transform: translate3d(0, 0, 0);
+  }
+  .toggle:before {
+    content: "";
+    position: relative;
+    top: 3px;
+    left: 3px;
+    width: 34px;
+    height: 14px;
+    display: block;
+    background: #9A9999;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+  }
+  .toggle span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    display: block;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(154, 153, 153, 0.5);
+    transition: all 0.2s ease;
+  }
+  .toggle span:before {
+    content: "";
+    position: absolute;
+    display: block;
+    margin: -18px;
+    width: 56px;
+    height: 56px;
+    background: rgba(129, 8, 14, 0.5);
+    border-radius: 50%;
+    transform: scale(0);
+    opacity: 1;
+    pointer-events: none;
+  }
+  
+  .cbx:checked + .toggle:before {
+    background:#403D39;
+  }
+  .cbx:checked + .toggle span {
+    background:#EB5E28;
+    transform: translateX(20px);
+    transition: all 0.2s cubic-bezier(0.8, 0.4, 0.3, 1.25), background 0.15s ease;
+    box-shadow: 0 3px 8px rgba(209, 9, 9, 0.2);
+  }
+  .cbx:checked + .toggle span:before {
+    transform: scale(1);
+    opacity: 0;
+    transition: all 0.4s ease;
+  }
+  
+.checkboxCont {
+    display: flex;
+    
+}
+
+.spacer {
+    height: 2vh;
+}
+.buttonCont {
+    display: flex;
+    justify-content: center;
 }
 
 h2 {
     margin: 0;
-    margin-bottom: 1vh;
+    margin-bottom: 2vh;
+    
+
 }
 input {
     margin: 1vh;
