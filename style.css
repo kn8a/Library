@@ -44,7 +44,7 @@ table {
 }
 
 td {
-    border: grey solid 1px;
+    border: rgba(128, 128, 128, 0.527) solid 1px;
     padding-top: 1vh;
     padding-bottom: 1vh;
     padding-left: 1vh;
@@ -54,6 +54,7 @@ th {
     text-align: left;
     padding-left: 1vh;
     color: #CCC5B9;
+    padding-bottom: 0.5vh;
 }
 
 tr:nth-child(even) {
@@ -86,14 +87,14 @@ tr:nth-child(even) {
     transform: scale(1) rotate(180deg);
 }
 
-
 #popupForm {
     display: none;
     position: fixed;
     left: 50%;
     top: 5%;
     transform: translate(-50%, 5%);
-    border: 3px solid #EB5E28;
+    border: 2px solid #EB5E28;
+    border-radius: 3vh;
     z-index: 9;
     background-color: #CCC5B9;
     padding: 3vh;
