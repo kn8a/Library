@@ -22,6 +22,7 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    color: #CCC5B9;
 }
 
 .main {
@@ -36,8 +37,6 @@ body {
     margin-top: 2vh;
     height:min-content;
 }
-
-
 
 h1 {
     margin: 0;
@@ -124,8 +123,8 @@ tr:nth-child(even) {
 
 .delBtn {
     background-color:transparent;
-    border: transparent;
-    border-radius: 1vh;
+    border: 2px solid #EB5E28;
+    border-radius: 100%;
     cursor: pointer;
     color: #EB5E28;
     font-size: larger;
@@ -207,8 +206,8 @@ input[type="checkbox"] {
     margin: 0;
     font: inherit;
      color: currentColor;
-     width: 1.4em;
-     height: 1.4em;
+     width: 1.5em;
+     height: 1.5em;
      border: 0.15em solid #CCC5B9;
      border-radius: 0.15em;
      transform: translateY(-0.075em);
@@ -218,8 +217,8 @@ input[type="checkbox"] {
 
   input[type="checkbox"]::before {
     content: "";
-    width: 1em;
-    height: 1em;
+    width: 1.5em;
+    height: 1.5em;
     transform: scale(0);
     transition: 120ms transform ease-in-out;
     box-shadow: inset 1em 1em var(--form-control-color);
