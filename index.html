@@ -10,9 +10,9 @@
     
 </head>
 <body>
+    
     <div class='main'>
-        <div class="heading"><h1>My Library</h1></div>
-        
+        <div class="heading"><h1>My Library</h1></div>        
         <div class='form' id='popupForm'>
             <form id='entryForm'>
                 <h2>New book</h2>
@@ -25,15 +25,15 @@
                 <div class="spacer"></div>
                 <div class="checkboxCont"> 
                     <div><label for="read">Has been read&ensp;</label></div>
-                    <div><input type="checkbox" id='read' name='read'>
-                        <label for="read" class="toggle"><span></span></div>
-                    
+                    <div>
+                        <input type="checkbox" id='read' name='read'>
+                        <label for="read" class="toggle"><span></span>
+                    </div>                    
                 </div>
                 <div class="spacer"></div>
                 <button class="formButton" id="submit" type="submit">✔️ Submit</button>
             </form>
-            <div class="buttonCont"><button class="formButton" type="close" onclick="closeForm()">❌ Cancel</button></div>
-            
+            <div class="buttonCont"><button class="formButton" type="close" onclick="closeForm()">❌ Cancel</button></div>            
         </div>
         <div class='table'>
         <table>
@@ -49,9 +49,9 @@
              <tbody id='books'>
              </tbody>
         </table>
-        <button id='showForm' class="formButton">➕ Add Book</button>
+        <div class="showButtonDiv"><button id='showForm' class="newBookBtn">+</button></div>
         </div>
     </div>
-    <div class="footer"></div>
+    <div class="footer"><div>© 2022 kn8a</div></div>
 </body>
 </html>
