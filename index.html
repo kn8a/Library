@@ -16,16 +16,16 @@
         <div class='form' id='popupForm'>
             <form id='entryForm'>
                 <h2>New book</h2>
-                <label for='title'>Title:</label>
-                <input type="text" id='title' name='title' required>
-                <label for='author'>Author:</label>
-                <input type="text" id='author' name='author' required>
+                <label for='title' >Title:*</label>
+                <input type="text" id='title' name='title' required placeholder="Title required">
+                <label for='author'>Author:*</label>
+                <input type="text" id='author' name='author' required placeholder="Author required">
                 <label for='pages'>Number of pages:</label>
                 <input type="number" id='pages' name='pages'>
                 <div class="spacer"></div>
                 <div class="checkboxCont"> 
                     <div><label for="read">Has been read&ensp;</label></div>
-                    <div><input type="checkbox" class="cbx" id='read' name='read' style="display:none">
+                    <div><input type="checkbox" id='read' name='read'>
                         <label for="read" class="toggle"><span></span></div>
                     
                 </div>

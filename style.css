@@ -39,6 +39,7 @@ h1 {
 table {
     width: 100%;
     border-collapse: collapse;
+    
 }
 
 td {
@@ -53,7 +54,6 @@ th {
     padding-left: 1vh;
     color: #CCC5B9;
 }
-
 
 
 tr:nth-child(even) {
@@ -101,7 +101,7 @@ tr:nth-child(even) {
     font-weight: 600;
 }
 
-input{
+input[type="text"], input[type="number"]{
     border:none;
     outline:none;
     height:34px;  
@@ -111,69 +111,9 @@ input{
     width:220px;
     box-sizing:border-box;
     padding:0 18px; 
+    margin: 1vh;
   }
 
-.toggle {
-    position: relative;
-    display: block;
-    width: 40px;
-    height: 20px;
-    cursor: pointer;
-    -webkit-tap-highlight-color: transparent;
-    transform: translate3d(0, 0, 0);
-  }
-  .toggle:before {
-    content: "";
-    position: relative;
-    top: 3px;
-    left: 3px;
-    width: 34px;
-    height: 14px;
-    display: block;
-    background: #9A9999;
-    border-radius: 8px;
-    transition: background 0.2s ease;
-  }
-  .toggle span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 20px;
-    height: 20px;
-    display: block;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 3px 8px rgba(154, 153, 153, 0.5);
-    transition: all 0.2s ease;
-  }
-  .toggle span:before {
-    content: "";
-    position: absolute;
-    display: block;
-    margin: -18px;
-    width: 56px;
-    height: 56px;
-    background: rgba(129, 8, 14, 0.5);
-    border-radius: 50%;
-    transform: scale(0);
-    opacity: 1;
-    pointer-events: none;
-  }
-  
-  .cbx:checked + .toggle:before {
-    background:#403D39;
-  }
-  .cbx:checked + .toggle span {
-    background:#EB5E28;
-    transform: translateX(20px);
-    transition: all 0.2s cubic-bezier(0.8, 0.4, 0.3, 1.25), background 0.15s ease;
-    box-shadow: 0 3px 8px rgba(209, 9, 9, 0.2);
-  }
-  .cbx:checked + .toggle span:before {
-    transform: scale(1);
-    opacity: 0;
-    transition: all 0.4s ease;
-  }
   
 .checkboxCont {
     display: flex;
@@ -183,6 +123,7 @@ input{
 .spacer {
     height: 2vh;
 }
+
 .buttonCont {
     display: flex;
     justify-content: center;
@@ -194,7 +135,37 @@ h2 {
     
 
 }
-input {
-    margin: 1vh;
-}
 
+input[type="checkbox"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    appearance: none;
+    /* For iOS < 15 to remove gradient background */
+    background-color: #fff;
+    /* Not removed via appearance */
+    margin: 0;
+    font: inherit;
+     color: currentColor;
+     width: 1.4em;
+     height: 1.4em;
+     border: 0.15em solid currentColor;
+     border-radius: 0.15em;
+     transform: translateY(-0.075em);
+     display: grid;
+     place-content: center;
+  }
+  input[type="checkbox"]::before {
+    content: "";
+    width: 1em;
+    height: 1em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+    background-color:#EB5E28;
+    transform-origin: bottom left;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  }
+
+  input[type="checkbox"]:checked::before {
+    transform: scale(1);
+  }

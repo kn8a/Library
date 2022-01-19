@@ -1,8 +1,6 @@
 let myLibrary = [
-    {title:"book1", author:"author1", pages:58, read:true},
-    {title:"book2", author:"author2", pages:68, read:false},
-    {title:"book3", author:"author3", pages:78, read:true},
-    {title:"book1", author:"author1", pages:58, read:true},
+    {title:"I, Robot", author:"Isaac Asimov", pages:304, read:false},
+    {title:"Fight Club", author:"Chuck Palahniuk", pages:208, read:true},
 ];
 
 function addBook(title, author, pages, read) {
@@ -17,6 +15,7 @@ function addBook(title, author, pages, read) {
 //    myLibrary.push()
 //}
 let delBtns = [];
+let checkBoxes = [];
 function tableLoad(myLibrary) {
   const tableBody = document.getElementById('books');
   let tableData = '';
@@ -24,12 +23,10 @@ function tableLoad(myLibrary) {
   for (let book of myLibrary) {
     let checkState=''
     if (book.read==true) {
-      checkState = `<input type="checkbox" data-cbx=${i} class="cbx" id='read' name='read' style="display:none" checked>
-      <label for="read" class="toggle"><span></span>`
+      checkState = `<input type="checkbox" class="cbx" data-cbx=${i} id='read' name='read' checked>`
     }
     else if (book.read==false) {
-      checkState = `<input type="checkbox" data-cbx=${i} class="cbx" id='read' name='read' style="display:none">
-      <label for="read" class="toggle"><span></span>`
+      checkState = `<input type="checkbox" class="cbx" data-cbx=${i} id='read' name='read'>`
     }
 
     tableData += `<tr><td>${book.title}</td><td>${book.author}</td><td>${book.pages}</td><td>${checkState}</td><td><button class="delBtn" data-del=${i}>❌</button></td></tr>`;
@@ -45,6 +42,20 @@ function tableLoad(myLibrary) {
       tableLoad(myLibrary);
     })
        
+  });
+  checkBoxes = document.querySelectorAll('.cbx');
+  checkBoxes.forEach((button) => {
+    button.addEventListener('click', () => {
+      let checkIndex = button.getAttribute('data-cbx');
+      if (myLibrary[checkIndex].read == true) {
+        myLibrary[checkIndex].read = false;
+      }
+      else if (myLibrary[checkIndex].read == false) {
+        myLibrary[checkIndex].read = true;
+      }
+	  
+      tableLoad(myLibrary);
+    })
   });
 }
 
