@@ -1,8 +1,6 @@
 let myLibrary = [ //array of book objects
     {title:"I, Robot", author:"Isaac Asimov", pages:304, read:false},
     {title:"Fight Club", author:"Chuck Palahniuk", pages:204, read:true},
-    
-    
 ];
 
 function addBook(title, author, pages, read) { //book object constructor

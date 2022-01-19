@@ -18,6 +18,10 @@ body {
     align-items: center;
     justify-content: space-between;
     padding-left: 1vh;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .main {
@@ -63,6 +67,10 @@ th {
     padding-left: 1vh;
     color: #CCC5B9;
     padding-bottom: 0.5vh;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 tr:nth-child(even) {
@@ -121,6 +129,10 @@ tr:nth-child(even) {
     cursor: pointer;
     color: #EB5E28;
     font-size: larger;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .formButton {
@@ -135,6 +147,17 @@ tr:nth-child(even) {
     border-radius: 3vh;
     cursor: pointer;
     font-weight: 600;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+label {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 input[type="text"], input[type="number"]{
@@ -167,21 +190,26 @@ input[type="text"], input[type="number"]{
 h2 {
     margin: 0;
     margin-bottom: 2vh;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 input[type="checkbox"] {
+    cursor: pointer;
     /* Add if not using autoprefixer */
     -webkit-appearance: none;
     appearance: none;
     /* For iOS < 15 to remove gradient background */
-    background-color: #fff;
+    background-color:#252422;
     /* Not removed via appearance */
     margin: 0;
     font: inherit;
      color: currentColor;
      width: 1.4em;
      height: 1.4em;
-     border: 0.15em solid currentColor;
+     border: 0.15em solid #CCC5B9;
      border-radius: 0.15em;
      transform: translateY(-0.075em);
      display: grid;
