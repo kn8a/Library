@@ -68,12 +68,14 @@ let form = document.getElementById('entryForm'); //vartiable for entry form
     tableLoad(myLibrary); //reload table
     closeForm(); //close entry form
     form.preventDefault() //prevents from defaulting to original state
+    form.reset(); //reset form firlds
   }
 
 const showForm = document.getElementById('showForm'); //new book button to variable
 showForm.onclick = function() { 
   document.getElementById('popupForm').style.display = "block" //open form 
 }
-function closeForm() {
-  document.getElementById("popupForm").style.display = "none"; //close form
+function closeForm() {//close form
+  document.getElementById("popupForm").style.display = "none";
+  document.getElementById("entryForm").reset();  //reset form fields
 }
