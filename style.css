@@ -4,10 +4,20 @@ body {
     flex-direction: column;
     margin: 0;
     height: 100vh;
+    height:min-content;
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
     color: #FFFCF2;
     
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3vh;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 1vh;
 }
 
 .main {
@@ -17,16 +27,13 @@ body {
     background-color: #252422;
     padding: 2vh;
     flex-direction: column;
-    height: 98vh;
+    min-height: 91vh;
     border-radius: 5vh;
-    margin-top: 30px;
+    margin-top: 2vh;
+    height:min-content;
 }
 
-.heading {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 3vh;
-}
+
 
 h1 {
     margin: 0;
@@ -40,7 +47,8 @@ h1 {
 
 table {
     width: 100%;
-    border-collapse: collapse;    
+    border-collapse: collapse;
+    overflow-wrap: break-word;    
 }
 
 td {
@@ -111,6 +119,8 @@ tr:nth-child(even) {
     border: transparent;
     border-radius: 1vh;
     cursor: pointer;
+    color: #EB5E28;
+    font-size: larger;
 }
 
 .formButton {
@@ -195,7 +205,7 @@ input[type="checkbox"] {
   }
 
   .footer{
-      height: 30px;
+      height: 3vh;
       display: flex;
     
       text-align: center;
