@@ -49,6 +49,7 @@ h1 {
 }
 
 table {
+    table-layout: fixed;
     width: 100%;
     border-collapse: collapse;
     overflow-wrap: break-word;    
@@ -64,6 +65,7 @@ td {
 th {
     text-align: left;
     padding-left: 1vh;
+    padding-right:1vh;
     color: #CCC5B9;
     padding-bottom: 0.5vh;
     -webkit-user-select: none;
@@ -74,6 +76,18 @@ th {
 
 tr:nth-child(even) {
     background-color: #25242256;
+}
+
+.pagesCol {
+    width: 68px;
+    padding-left: 0.5vh;
+    padding-right:0.5vh;
+}
+
+.readCol, .delCol {
+    width: 54px;
+    padding-left: 0.5vh;
+    padding-right:0.5vh;
 }
 
 .showButtonDiv {

@@ -25,7 +25,7 @@ function tableLoad(myLibrary) { //load the table
     else if (book.read==false) { //unchecked
       checkState = `<input type="checkbox" class="cbx" data-cbx=${i} id='read' name='read'>`
     }
-    tableData += `<tr><td>${book.title}</td><td>${book.author}</td><td>${book.pages}</td><td>${checkState}</td><td><button class="delBtn" data-del=${i}>X</button></td></tr>`; //append HTML into tableData
+    tableData += `<tr><td>${book.title}</td><td>${book.author}</td><td class="pagesCol">${book.pages}</td><td class="readCol">${checkState}</td><td class="delCol"><button class="delBtn" data-del=${i}>X</button></td></tr>`; //append HTML into tableData
     i++;
   } //end loop
   tableBody.innerHTML = tableData; //insert HTML into table
@@ -74,9 +74,15 @@ let form = document.getElementById('entryForm');
 
 const showForm = document.getElementById('showForm'); //new book button to variable
 showForm.onclick = function() { 
-  document.getElementById('popupForm').style.display = "block" //open form 
+  document.getElementById('popupForm').style.display = "block"; //show form
+  showForm.style.backgroundColor="transparent";//hide + button
+  showForm.style.color="transparent";
+  showForm.style.cursor="default" 
 }
 function closeForm() {
-  document.getElementById("popupForm").style.display = "none";
+  document.getElementById("popupForm").style.display = "none"; //close form
   document.getElementById("entryForm").reset();  //reset form fields
+  showForm.style.backgroundColor="#EB5E28"; //restor + button
+  showForm.style.color="#FFFCF2";
+  showForm.style.cursor="pointer";
 }
