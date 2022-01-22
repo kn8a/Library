@@ -76,4 +76,16 @@ h2 {
     text-align: center;
     color: #CCC5B9;
     align-items: center;
+    text-decoration-line: none;
+    
+    
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    color: #CCC5B9;
+    text-decoration: none;
 }
