@@ -151,19 +151,25 @@ tr:nth-child(even) {
 .formButton {
     padding-top: 0.5vh;
     padding-bottom: 0.5vh;
-    padding-left: 2vh;
-    padding-right: 2vh;
-    background-color:#403D39;
+    width: 90%;
+    background-color:#EB5E28;
     color:#FFFCF2 ;
     margin: 0.5vh;
     align-self: center;
     border-radius: 3vh;
     cursor: pointer;
-    font-weight: 600;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+    font-weight: 500;
+    font-size: large;
+    border: 0;
+    transition: transform 100ms ease-in;
+}
+
+.formButton:hover {
+    transform: scale(1.05);
+}
+
+.formButton:active {
+    transform: scale(0.9);
 }
 
 label {
