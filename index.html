@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
     <script src="library.js" defer></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/table.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/del_cbx.css">
     
 </head>
 <body>
     
     <div class='main'>
-        <div class="heading"><h1>My Library</h1><div class="showButtonDiv"><button id='showForm' class="newBookBtn">+</button></div></div>        
+        <div class="heading"><h1>📚 My Library</h1><div class="showButtonDiv"><button id='showForm' class="newBookBtn">+</button></div></div>        
         <div class='form' id='popupForm'>
             <form id='entryForm' autocomplete="off">
                 <h2>New book</h2>
@@ -32,16 +35,16 @@
                                        
                 </div>
                 <div class="spacer"></div>
-                <button class="formButton" id="submit" type="submit">🗸 Submit</button>
+                <button class="formButton" id="submit" type="submit">Add</button>
             </form>
-            <div class="buttonCont"><button class="formButton" type="close" onclick="closeForm()">X Cancel</button></div>            
+            <div class="buttonCont"><button class="formButton" type="close" onclick="closeForm()">Cancel</button></div>            
         </div>
         <div class='table'>
         <table>
              <thead>
                  <tr>
-                     <th>Title</th>
-                     <th>Author</th>
+                     <th>📕 Title</th>
+                     <th>🖊️ Author</th>
                      <th class="pagesCol">Pages</th>
                      <th class="readCol">Read</th>
                      <th class="delCol">Delete</th>
